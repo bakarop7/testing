@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4d88;
+    }
+
+    #prompt {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 1.2em;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff66b2;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+      color: black;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💍 Will you marry me?</h1>
+
+  <div id="prompt">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    yesBtn.onclick = function () {
+      document.body.innerHTML = "<h1>💖 You just made me the happiest person in the world!</h1>";
+    };
+
+    noBtn.onmouseover = function () {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.position = 'absolute';
+      noBtn.style.left = x + 'px';
+      noBtn.style.top = y + 'px';
+    };
+  </script>
+
+</body>
+</html>
